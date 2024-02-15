@@ -1,0 +1,60 @@
+<mat-card>
+    <mat-card-header>
+        <h1>List Of Users</h1>
+        <button (click)="onAdd()" mat-raised-button color="primary" class="add-btn">Add User(+)</button>
+    </mat-card-header>
+    <mat-card-content>
+        <input type="text" placeholder="Seacrh here..." (change)="onSearch($event)">
+        <table matSort mat-table [dataSource]="datasource" class="mat-elevation-z8">
+
+            <!-- <ng-container matColumnDef="id">
+                <mat-header-cell mat-sort-header *matHeaderCellDef>Id</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.id}}</mat-cell>
+            </ng-container> -->
+
+            <ng-container matColumnDef="firstName">
+                <mat-header-cell mat-sort-header *matHeaderCellDef>First Name</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.firstName}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="lastName">
+                <mat-header-cell mat-sort-header *matHeaderCellDef>Last Name</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.lastName}}</mat-cell>
+            </ng-container>
+            <ng-container  matColumnDef="username">
+                <mat-header-cell mat-sort-header *matHeaderCellDef>User Name</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.username}}</mat-cell>
+            </ng-container>
+            <ng-container  matColumnDef="phoneNumber">
+                <mat-header-cell mat-sort-header *matHeaderCellDef>Phone Number</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.phoneNumber}}</mat-cell>
+            </ng-container>
+            <ng-container  matColumnDef="gender">
+                <mat-header-cell mat-sort-header *matHeaderCellDef>Gender</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.gender}}</mat-cell>
+            </ng-container>
+            <ng-container  matColumnDef="email">
+                <mat-header-cell mat-sort-header *matHeaderCellDef>Email</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{element.email}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="action">
+                <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <button (click)="onEdit(element.username)"  mat-raised-button color="primary">Edit</button>
+                    <button (click)="onDelete(element.username)" mat-raised-button color="accent">Delete</button>
+                </mat-cell>
+               
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+             <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+
+        </table>
+
+    </mat-card-content>
+    <mat-card-footer>
+        <mat-paginator [pageSizeOptions]="[5,10,50]" showFirstLastButtons></mat-paginator>
+    </mat-card-footer>
+
+
+
+</mat-card>

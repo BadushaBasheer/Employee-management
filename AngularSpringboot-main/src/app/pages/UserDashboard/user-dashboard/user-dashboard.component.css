@@ -1,0 +1,18 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.user-card {
+    width: 400px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+p{
+    font-family: "Arial Rounded MT Bold","sans-serif";
+}
