@@ -1,0 +1,173 @@
+{
+  "associate": [
+    {
+      "id": 1,
+      "name": "Athul Raj",
+      "email": "athul@gmail.com",
+      "phone": "899089898",
+      "associategroup": "level1",
+      "address": "Ernakulam\nIndia",
+      "type": "SUPPLIER",
+      "status": true
+    },
+    {
+      "id": 2,
+      "name": "Salisha Jose",
+      "email": "salisha@gmail.com",
+      "phone": "897789898",
+      "associategroup": "level1",
+      "address": "Thrissur, \nIndia",
+      "type": "CUSTOMER",
+      "status": true
+    },
+    {
+      "id": 3,
+      "name": "Aarathy Nair",
+      "email": "aarathy@gmail.com",
+      "phone": "699089898",
+      "associategroup": "level1",
+      "address": "Thrissur,\nIndia",
+      "type": "CUSTOMER",
+      "status": true
+    },
+    {
+      "id": 4,
+      "name": "Athul Raj",
+      "email": "athul@gmail.com",
+      "phone": "899089898",
+      "associategroup": "level1",
+      "address": "Ernakulam\nIndia",
+      "type": "SUPPLIER",
+      "status": true
+    },
+    {
+      "id": 5,
+      "name": "Salisha Jose",
+      "email": "salisha@gmail.com",
+      "phone": "897789898",
+      "associategroup": "level2",
+      "address": "Thrissur, \nIndia",
+      "type": "SUPPLIER",
+      "status": true
+    },
+    {
+      "id": 6,
+      "name": "Aarathy Nair",
+      "email": "aarathy@gmail.com",
+      "phone": "699089898",
+      "associategroup": "level1",
+      "address": "Thrissur,\nIndia",
+      "type": "CUSTOMER",
+      "status": true
+    },
+    {
+      "id": 7,
+      "name": "Bibin S",
+      "email": "bibin@gmail.com",
+      "phone": "9633513778",
+      "associategroup": "level1",
+      "address": "Nucleas Mall, Banglore",
+      "type": "CUSTOMER",
+      "status": true
+    },
+    {
+      "id": 8,
+      "name": "Amal",
+      "email": "amal@gmail.com",
+      "phone": "9633513779",
+      "associategroup": "level1",
+      "address": "Maradu, Kerala",
+      "type": "CUSTOMER",
+      "status": true
+    }
+  ],
+  "user": [
+    {
+      "username": "admin",
+      "password": "admin",
+      "name": "Adminuser",
+      "email": "ad@in.com",
+      "phone": "678888",
+      "gender": "male",
+      "role": "admin",
+      "status": true,
+      "id": 1
+    },
+    {
+      "username": "testuser",
+      "password": "test",
+      "name": "NT User",
+      "email": "nt@in.com",
+      "phone": "678889999",
+      "gender": "female",
+      "role": "manager",
+      "status": true,
+      "id": 2
+    },
+    {
+      "username": "ntuser",
+      "password": "12345",
+      "name": "NT User 2",
+      "email": "nt2@in.com",
+      "phone": "1234567890",
+      "gender": "male",
+      "role": "user",
+      "status": true,
+      "id": 3
+    }
+  ],
+  "role": [
+    {
+      "code": "admin",
+      "name": "Admin"
+    },
+    {
+      "code": "manager",
+      "name": "Manager"
+    },
+    {
+      "code": "user",
+      "name": "User"
+    }
+  ],
+  "menu": [
+    {
+      "code": "associate",
+      "name": "Associate"
+    },
+    {
+      "code": "customer",
+      "name": "Customer"
+    },
+    {
+      "code": "user",
+      "name": "User"
+    }
+  ],
+  "roleaccess": [
+    {
+      "role": "admin",
+      "menu": "associate"
+    },
+    {
+      "role": "admin",
+      "menu": "customer"
+    },
+    {
+      "role": "admin",
+      "menu": "user"
+    },
+    {
+      "role": "manager",
+      "menu": "associate"
+    },
+    {
+      "role": "manager",
+      "menu": "customer"
+    },
+    {
+      "role": "user",
+      "menu": "associate"
+    }
+  ]
+}

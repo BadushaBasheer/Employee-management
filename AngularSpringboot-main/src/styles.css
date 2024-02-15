@@ -1,0 +1,72 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+html, body {
+    height: 100%;
+    background-image: url("assets/mountain.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.text-danger {
+    color: red;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.mr20 {
+    margin-right: 60px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mr40 {
+    margin-right: 50px;
+}
+
+
+.green-snackbar {
+    background: green !important;
+    color: white;
+}
+
+.green-snackbar button {
+    background-color: green;
+    color: white !important;
+    border: none;
+}
+
+.red-snackbar {
+    background: red;
+    color: white;
+}
+
+.red-snackbar button {
+    background-color: red;
+    color: white !important;
+    border: none;
+}

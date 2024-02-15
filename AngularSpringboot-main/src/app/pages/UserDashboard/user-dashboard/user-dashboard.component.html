@@ -1,0 +1,39 @@
+<div class="home-container">
+    <mat-card class="user-card">
+        <mat-card-header class="d-flex flex-column align-items-center">
+            <div class="text-center">
+                <mat-icon class="fa-3x">person</mat-icon>
+                <mat-card-title>User Profile</mat-card-title>
+            </div>
+        </mat-card-header>
+        <hr>
+        <mat-card-content>
+            <div class="user-info">
+                <img [src]="url" style="width:150px" alt="Profile Image">
+                <p><strong>First Name:{{ user.firstName }}</strong></p>
+                <p><strong>Last Name: {{ user.lastName }}</strong></p>
+                <p><strong>Email: {{ user.email }}</strong></p>
+                <p><strong>Phone Number: {{ user.phoneNumber }}</strong></p>
+                <p><strong>Username: {{ user.username }}</strong></p>
+            </div>
+        </mat-card-content>
+        <div class="mt20">
+            <form enctype="multipart/form-data">
+                <fieldset>
+                    <div class="text-center">
+                        <input type="file" (change)="onChange($event)" name="files" class="form-control"/>
+                        <button mat-raised-button color="primary" class="mb-2 mt-2" (click)="onClick()">Upload</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </mat-card>
+
+</div>
+
+
+
+
+
+
+

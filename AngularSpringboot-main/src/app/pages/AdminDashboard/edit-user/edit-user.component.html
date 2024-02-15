@@ -1,0 +1,100 @@
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <mat-card style="min-height: 500px;">
+        <mat-card-header>
+            {{title}}
+        </mat-card-header>
+        <mat-card-content>
+          
+    
+            <mat-form-field appearance="fill"  class="mat-50">
+                <mat-label>First Name</mat-label>
+                <input type="text" formControlName="firstName" name="firstName" matInput placeholder="Enter Here">
+                
+                  <div *ngIf="editForm.get('firstName')?.invalid && editForm.get('firstName')?.touched">
+                    <small class="text-danger" *ngIf="editForm.get('firstName')?.errors?.['required']">FirstName is Required</small>
+                    <small class="text-danger" *ngIf="editForm.get('firstName')?.errors?.['minlength']">FirstName requires min 4 characters</small>
+                  </div>
+              
+              </mat-form-field>
+
+              <mat-form-field appearance="fill"  class="mat-50">
+                <mat-label>Last Name</mat-label>
+                <input type="text" formControlName="lastName"   name="lastName" matInput placeholder="Enter Here">
+                <div *ngIf="editForm.get('lastName')?.invalid && editForm.get('lastName')?.touched">
+                  <small class="text-danger" *ngIf="editForm.get('lastName')?.errors?.['required']">LastName is Required</small>
+                  <small class="text-danger" *ngIf="editForm.get('lastName')?.errors?.['minlength']">LastName requires min 4 characters</small>
+                </div>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill"  class="mat-50">
+                <mat-label>User Name</mat-label>
+                <input type="text"  formControlName="username" name="username" matInput placeholder="Enter Here">
+                <div *ngIf="editForm.get('username')?.invalid && editForm.get('username')?.touched">
+                  <small class="text-danger" *ngIf="editForm.get('username')?.errors?.['required']">UserName is Required</small>
+                  <small class="text-danger" *ngIf="editForm.get('username')?.errors?.['minlength']">UserName requires min 4 characters</small>
+                </div>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill"  class="mat-50">
+                <mat-label>Email</mat-label>
+                <input type="email" formControlName="email" name="email" matInput placeholder="Enter Here">
+                <div *ngIf="editForm.get('email')?.invalid && editForm.get('email')?.touched">
+                  <small class="text-danger" *ngIf="editForm.get('email')?.errors?.['required']">Email is Required</small>
+                  <small class="text-danger" *ngIf="editForm.get('email')?.errors?.['email']">Email is not valid</small>
+                </div>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill"  class="mat-50">
+                <mat-label>Phone Number</mat-label>
+                <input type="text"  formControlName="phoneNumber" name="phoneNumber" matInput placeholder="Enter Here">
+                <div *ngIf="editForm.get('phoneNumber')?.invalid && editForm.get('phoneNumber')?.touched">
+                  <small class="text-danger" *ngIf="editForm.get('phoneNumber')?.errors?.['required']">PhoneNumber is Required</small>
+                  <small class="text-danger" *ngIf="editForm.get('phoneNumber')?.errors?.['minlength']">phoneNumber requires min 10 numbers</small>
+                </div>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill"  class="mat-50">
+                <mat-label>Gender</mat-label>
+                <input type="text"  formControlName="gender" name="gender" matInput placeholder="Enter Here">
+                <div *ngIf="editForm.get('gender')?.invalid && editForm.get('gender')?.touched">
+                  <small class="text-danger" *ngIf="editForm.get('gender')?.errors?.['required']">Gender is Required</small>
+                  
+                </div>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill"  class="mat-50">
+                <mat-label>Password</mat-label>
+                <input type="password"  formControlName="password" name="password" matInput placeholder="Enter Here">
+                <div *ngIf="editForm.get('password')?.invalid && editForm.get('password')?.touched">
+                  <small class="text-danger" *ngIf="editForm.get('password')?.errors?.['required']">Password is Required</small>
+                  <small class="text-danger" *ngIf="editForm.get('password')?.errors?.['minlength']">Password requires min 4 characters</small>
+                </div>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill"  class="mat-50">
+                <mat-label>Confirm Password</mat-label>
+                <input type="password"  formControlName="confirmPassword" name="confirmPassword" matInput placeholder="Enter Here">
+                <div *ngIf="editForm.get('confirmPassword')?.invalid && editForm.get('confirmPassword')?.touched">
+                  <small class="text-danger" *ngIf="editForm.get('confirmPassword')?.errors?.['required']">Password is Required</small>
+                  
+                </div>
+              </mat-form-field>
+
+        </mat-card-content>
+    <mat-card-actions>
+        <button type="submit" mat-raised-button color="primary">Save</button>
+        <a (click)="closePopup()" mat-raised-button color="accent">close</a>
+
+
+    </mat-card-actions>
+
+
+
+
+    </mat-card>
+
+
+
+
+
+</form>
